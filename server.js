@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 const PORT = 8000;
 const cors = require('cors');
+
+app.use(cors());
+
+
 const tea = {
     'oolong':{
         'name':'Oolong',
@@ -53,3 +57,6 @@ app.get( '/api/:Name',(request, response)=>{
 app.listen(process.env.PORT || PORT, () => {
     console.log(`The server is running on port${PORT}! Betta go catch it!`)
 });
+
+//  https://tea-api-100dev.herokuapp.com/
+//  https://git.heroku.com/tea-api-100dev.git
